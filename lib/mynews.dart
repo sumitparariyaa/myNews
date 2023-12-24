@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:mynews/screens/mainscreen.dart';
-import 'package:mynews/screens/splash_screen.dart';
 import 'package:mynews/theme.dart';
 
 class MyNews extends StatelessWidget {
@@ -14,7 +13,7 @@ class MyNews extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       themeMode: ThemeMode.system,
       theme: newsTheme.lightTheme,
-      darkTheme: ThemeData(),
+      darkTheme: newsTheme.darkTheme,
       home: MainScreen(),
     );
   }

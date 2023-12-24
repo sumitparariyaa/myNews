@@ -7,6 +7,7 @@ import 'package:mynews/screens/settingscreen.dart';
 import 'package:mynews/widgets/bottom_nav.dart';
 import 'package:provider/provider.dart';
 
+// ignore: must_be_immutable
 class MainScreen extends StatelessWidget {
    MainScreen({super.key});
 

@@ -43,6 +43,9 @@ dependencies:
   http: ^1.1.0
   cached_network_image: ^3.3.0
   flutter_slidable: ^3.0.1
+  carousel_slider:
+  smooth_page_indicator:
+  webview_flutter: 
 
 dev_dependencies:
   flutter_test:

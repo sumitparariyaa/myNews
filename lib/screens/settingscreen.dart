@@ -25,7 +25,7 @@ class SettingScreen extends StatelessWidget {
               ),
               height: MediaQuery.of(context).size.height / 3,
               child: Center(
-                child: Lottie.asset('animations/woman.json',height: 100,reverse: true,repeat: true, fit: BoxFit.cover),
+                child: Lottie.asset('animations/man.json',height: 100,reverse: true,repeat: true, fit: BoxFit.cover),
               ),
             )
           ],

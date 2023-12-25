@@ -22,6 +22,8 @@ class SettingScreen extends StatelessWidget {
                       Colors.green.shade100
                     ]
                 ),
+                borderRadius: BorderRadius.only( bottomRight: Radius.circular(20),
+                    bottomLeft: Radius.circular(20)),
               ),
               height: MediaQuery.of(context).size.height / 3,
               child: Center(

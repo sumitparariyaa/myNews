@@ -12,7 +12,6 @@ class ShowCategoryNews {
     var response = await http.get(Uri.parse(url));
 
     var jsonData = jsonDecode(response.body);
-
     if (jsonData['status'] == 'ok') {
       jsonData["articles"].forEach((element) {
         if (element["urlToImage"] != null && element['description'] != null) {

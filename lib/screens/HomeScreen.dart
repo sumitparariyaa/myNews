@@ -2,6 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:mynews/models/article_model.dart';
+import 'package:mynews/screens/viewallnewsscreen.dart';
 import 'package:mynews/services/News_api.dart';
 import 'package:mynews/services/category_data.dart';
 import 'package:mynews/widgets/category_tile.dart';
@@ -82,13 +83,17 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
             const SizedBox(height: 10,),
-            const Padding(
+            Padding(
               padding: EdgeInsets.only(left: 8.0,right: 8),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text("Breaking News",style: TextStyle(color: Colors.black87,fontSize:17,fontWeight: FontWeight.w800,),),
-                  Text("View All",style: TextStyle(color: Colors.greenAccent,fontSize:17,fontWeight: FontWeight.w800,),),
+                  GestureDetector(
+                    onTap: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=> ViewAllNewsScreen(news: 'Breaking')));
+                    },
+                      child: Text("View All",style: TextStyle(color: Colors.greenAccent,fontSize:17,fontWeight: FontWeight.w800,),)),
                 ],
               ),
             ),
@@ -115,13 +120,20 @@ class _HomeScreenState extends State<HomeScreen> {
             const SizedBox(height: 20,),
             Center(child: Indicators(index: activeIndex, count: 5,)),
             const SizedBox(height: 10,),
-            const Padding(
+            Padding(
               padding: EdgeInsets.only(left: 8.0,right: 8),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text("Trending News",style: TextStyle(color: Colors.black87,fontSize:17,fontWeight: FontWeight.w800,),),
-                  Text("View All",style: TextStyle(color: Colors.greenAccent,fontSize:17,fontWeight: FontWeight.w800,),),
+                  GestureDetector(
+                    onTap: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=> ViewAllNewsScreen(news: 'Trending')));
+                    },
+                    child: Text(
+                      "View All",
+                      style: TextStyle(color: Colors.greenAccent,fontSize:17,fontWeight: FontWeight.w800,),),
+                  ),
                 ],
               ),
             ),

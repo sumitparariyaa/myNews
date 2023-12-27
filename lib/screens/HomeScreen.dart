@@ -138,18 +138,16 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
             const SizedBox(height: 10,),
-            Container(
-              child: ListView.builder(
-                physics: ClampingScrollPhysics(),
-                shrinkWrap: true,
-              itemCount: articles.length,
-                itemBuilder: (context, index){
-                  return BlogTile(
-                    imageUrl: articles[index].urlToImage!,
-                    desc:articles[index].description!,
-                    title:articles[index].title!, url: articles[index].url!,);
-                }),),
-
+            ListView.builder(
+              physics: ClampingScrollPhysics(),
+              shrinkWrap: true,
+            itemCount: articles.length,
+              itemBuilder: (context, index){
+                return BlogTile(
+                  imageUrl: articles[index].urlToImage!,
+                  desc:articles[index].description!,
+                  title:articles[index].title!, url: articles[index].url!,);
+              }),
           ],
         ),
       )
@@ -177,7 +175,6 @@ class _HomeScreenState extends State<HomeScreen> {
     )
   );
 }
-
 
 class BlogTile extends StatelessWidget {
   String imageUrl, title, desc,url;

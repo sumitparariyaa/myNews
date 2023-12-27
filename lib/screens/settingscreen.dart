@@ -27,9 +27,50 @@ class SettingScreen extends StatelessWidget {
               ),
               height: MediaQuery.of(context).size.height / 3,
               child: Center(
-                child: Lottie.asset('animations/man.json',height: 100,reverse: true,repeat: true, fit: BoxFit.cover),
+                child: Row(
+                  children: [
+                    Lottie.asset('animations/woman.json',height: 100,reverse: true,repeat: true, fit: BoxFit.cover),
+                    const SizedBox(width: 5,),
+                    Text("Hello", style: TextStyle(color: Colors.black,fontWeight: FontWeight.w500,fontSize: 40 ),)
+                  ],
+                ),
               ),
-            )
+            ),
+            const SizedBox(height: 10,),
+            Material(
+              elevation: 2,
+              borderRadius: BorderRadius.circular(10),
+              child: Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 10,vertical: 8),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Icon(Icons.more_rounded,),
+                      Text("About the App")
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            Material(
+              elevation: 2,
+              borderRadius: BorderRadius.circular(10),
+              child: Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 10,vertical: 8),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Icon(Icons.logout,),
+                      Text("Logout from App")
+                    ],
+                  ),
+                ),
+              ),
+            ),
           ],
         ),
       ),
